@@ -1,0 +1,19 @@
+{% extends "listings/base.html" %}
+
+{% block content %}
+
+<a class="/add-listing/ text-blue-500">Create a New Listing</a>
+
+{% for listing in listings %}
+
+
+
+<div class="mt-2 px-3 py-2 bg-gray-100 rounded-sm">
+    <h3 class="text-3xl text-gray-900">{{ listing.title }}</h3>
+    <a href="{% url 'listing_retrieve' listing.id %}" class="text-blue-500"> View details </a>
+
+</div>
+
+{% endfor %}
+
+{% endblock content %}
